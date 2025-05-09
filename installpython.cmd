@@ -1,1 +1,0 @@
-winget install --id Python.Python.3 --source winget

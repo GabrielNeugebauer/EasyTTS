@@ -13,7 +13,7 @@ async def main():
     print('Digite o nome do arquivo de áudio que deseja salvar (sem extensão):')
     nome_arquivo = input()
     print (f"{path}")
-    print (texto)
+    # print (texto) # Para debug
     comunicador = edge_tts.Communicate(
         text=texto,
         voice="pt-BR-AntonioNeural",  # Ou "pt-BR-FranciscaNeural"
