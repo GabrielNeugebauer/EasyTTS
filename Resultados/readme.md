@@ -1,0 +1,1 @@
+Nesta pasta ficarão os arquivos gerados pelo TTS.

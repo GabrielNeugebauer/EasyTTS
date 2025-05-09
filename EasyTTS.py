@@ -3,7 +3,7 @@ import asyncio
 import os
 
 async def main():
-    print('Bem vindo ao EasyTTS! digite o caminho do arquivo de texto que deseja converter em áudio:')
+    print('Bem vindo ao EasyTTS!\nDeveloped by @gabrielneugebauer\n\nDigite o caminho do arquivo de texto que deseja converter em áudio:')
     path = input().replace("\\", "/").replace("'", "").replace('"', "")
     texto = loadFile(path)
     texto = texto = ', '.join(texto).replace(".,",".")
@@ -19,8 +19,8 @@ async def main():
         voice="pt-BR-AntonioNeural",  # Ou "pt-BR-FranciscaNeural"
         rate="+5%",  # velocidade: -100% a +100%
     )
-    await comunicador.save(f"{nome_arquivo}.mp3")
-    print(f"Arquivo de áudio gerado com sucesso em {os.getcwd()}\\{nome_arquivo}.mp3!")
+    await comunicador.save(f"Resultados\\{nome_arquivo}.mp3")
+    print(f"Arquivo de áudio gerado com sucesso em {os.getcwd()}\\Resultados\\{nome_arquivo}.mp3!")
 
 
 def loadFile(path):
@@ -31,4 +31,4 @@ def loadFile(path):
         print(f"[!] Failed to load wordlist: {error}")
         return []
 asyncio.run(main())
-print("Programa encerrado!\nDeveloped by @gabrielneugebauer")
+print("Programa encerrado!")
